@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - quarkus_net
+
+networks:
+  quarkus_net:
+    driver: bridge
