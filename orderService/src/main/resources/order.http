@@ -11,6 +11,6 @@ POST http://localhost:8080/order/
 Content-Type: application/json
 
 {
-    "items": [{"productId": 1, "quantity": 2}, {"productId": 2, "quantity": 3}],
-    "clientId": 777
+    "items": [{"productId": "7f2c3f0e-ae2d-4967-9885-2832130b0462", "quantity": 2}, {"productId": "7f2c3f0e-ae2d-4967-9885-2832130b0465", "quantity": 3}],
+    "clientId": 123
 }

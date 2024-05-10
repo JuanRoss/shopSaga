@@ -15,7 +15,7 @@ data class OrderMongoEntity @BsonCreator constructor(
 )
 
 data class OrderItemMongoEntity @BsonCreator constructor(
-    @BsonProperty("productId") var productId: Long,
+    @BsonProperty("productId") var productId: UUID,
     @BsonProperty("quantity") var quantity: Int = 0
 )
 

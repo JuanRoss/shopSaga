@@ -9,6 +9,6 @@ open abstract class DomainEvent(
     val occurredAt: String = LocalDateTime.now().toString()) {
 
     constructor(aggregateId: String) :
-            this(aggregateId, eventId = "eventId", occurredAt = "")
+            this(aggregateId, eventId = UUID.randomUUID().toString(), occurredAt = LocalDateTime.now().toString())
 
 }

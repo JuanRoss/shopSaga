@@ -8,6 +8,19 @@ services:
     networks:
       - quarkus_net
 
+  rabbitmq:
+    container_name: shop-rabbitmq
+    image: 'rabbitmq:3.13.1-management'
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=jros
+      - RABBITMQ_DEFAULT_PASS=jros
+    networks:
+      - quarkus_net
+
 networks:
   quarkus_net:
     driver: bridge

@@ -5,7 +5,6 @@ import domain.OrderRepository
 import domain.Uuid
 import jakarta.enterprise.context.ApplicationScoped
 import jakarta.inject.Inject
-import org.bson.types.ObjectId
 
 @ApplicationScoped
 class OrderRepositoryMongo @Inject constructor(

@@ -13,7 +13,7 @@ class OrderCreator @Inject constructor(private val orderRepository: OrderReposit
 
     @Transactional
     fun create(order: Order) : Order {
-        eventBus.publish(OrderCreatedDomainEvent(order.id.toString(), order.clientId, order.items))
+        eventBus.publish(OrderCreatedDomainEvent(order.id?.value.toString(), order.clientId, order.items))
         return orderRepository.save(order)
     }
 }

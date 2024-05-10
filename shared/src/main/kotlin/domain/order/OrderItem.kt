@@ -1,3 +1,3 @@
 package domain.order
 
-data class OrderItem(val productId: Long, val quantity: Int)
+data class OrderItem(val productId: String, val quantity: Int)
