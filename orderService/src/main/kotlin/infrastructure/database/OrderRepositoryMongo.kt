@@ -17,8 +17,8 @@ class OrderRepositoryMongo @Inject constructor(
         return OrderDatabaseMapper.toDomain(orderMongoEntity)
     }
 
-    override fun findById(id: String) : Order? {
-        val orderMongoEntity = orderRepositoryMongoPanache.findById(Uuid(id).value)
+    override fun findById(id: Uuid) : Order? {
+        val orderMongoEntity = orderRepositoryMongoPanache.findById(id.value)
         return orderMongoEntity?.let { OrderDatabaseMapper.toDomain(it) }
     }
 
